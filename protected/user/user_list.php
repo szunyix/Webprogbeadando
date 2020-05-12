@@ -1,4 +1,4 @@
-<?php if(!isset($_SESSION['permission']) || $_SESSION['permission'] < 1) : # isset létrehozás ha pedmission jogunk van és nagyobbb mint 1 akk enged tovább ?>
+<?php if(!isset($_SESSION['permission']) || $_SESSION['permission'] < 1) : # isset létrehozás ha permission jogunk van és nagyobbb mint 1 akk enged tovább ?>
 	<h1>Page acces is formbidden!</h1>
 <?php else : ?>
 	<?php 
@@ -13,10 +13,10 @@
 			<thead>
 				<tr>
 					<th scope="col"> #</th>
-					<th scope="col"> First name</th>
-					<th scope="col"> Last name</th>
-					<th scope="col"> Email</th>
-					<th scope="col"> Permission</th>
+					<th scope="col"> Keresztnév</th>
+					<th scope="col"> Vezetéknév</th>
+					<th scope="col"> Elérhetőség</th>
+					<th scope="col"> Jog</th>
 				</tr>
 			</thead>
 			<tbody>
