@@ -22,7 +22,7 @@
 	        'csoport'  => $_POST['csoport'],
 	        'kurzusid' => $_POST['kurzusid']
 	      ];
-	      $query = "UPDATE kurzusok SET oktatoid = :oktatoid, kurzusid = :kurzusid, csoport = :csoport";
+	      $query = "UPDATE kurzusok SET oktatoid = :oktatoid, csoport = :csoport WHERE kurzusid = :kurzusid";
 	      $params = [
 	      	':oktatoid' => $postData['oktatoid'],
 	      	':kurzusid' => $postData['kurzusid'],
@@ -30,7 +30,7 @@
 	      ];
 	      require_once DATABASE_CONTROLLER;
 	      if(!executeDML($query,$params)){
-	      	echo "A szereksztés nem sikerült";
+	      	echo "A szerkesztés nem sikerült";
 	      }else{
 	      	echo "A szerkesztés sikeres!";
 	      }
