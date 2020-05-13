@@ -8,7 +8,10 @@ switch ($_GET['P']) {
 	case 'oktato': require_once PROTECTED_DIR.'oktato/profile.php'; break;
 	case 'add_oktato': IsUserLoggedIn() ? require_once PROTECTED_DIR.'oktato/add.php' : header('Location: index.php'); break;
 	case 'list_oktato': IsUserLoggedIn() ? require_once PROTECTED_DIR.'oktato/list.php' : header('Location: index.php'); break;
-	case 'edit_oktato': IsUserLoggedIn() ? require_once PROTECTED_DIR.'oktato/edit.php' : header('Location: index.php'); break;
+	case 'add_kurzus': IsUserLoggedIn() ? require_once PROTECTED_DIR.'kurzus/add.php' : header('Location: index.php'); break;
+	case 'list_kurzus': IsUserLoggedIn() ? require_once PROTECTED_DIR.'kurzus/list.php' : header('Location: index.php'); break;
+
+	case 'jelentkezes': IsUserLoggedIn() ? require_once PROTECTED_DIR.'kurzus/jelentkezes.php' : header('Location: index.php'); break;
 
 	case 'login': !IsUserLoggedIn() ? require_once PROTECTED_DIR.'user/login.php' : header('Location: index.php'); break;
 
