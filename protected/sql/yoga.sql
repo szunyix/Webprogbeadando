@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2020. Máj 13. 16:14
+-- Létrehozás ideje: 2020. Máj 13. 16:23
 -- Kiszolgáló verziója: 10.4.11-MariaDB
--- PHP verzió: 7.4.2
+-- PHP verzió: 7.2.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -73,14 +72,6 @@ CREATE TABLE `rend` (
   `kurzusid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
---
--- A tábla adatainak kiíratása `rend`
---
-
-INSERT INTO `rend` (`id`, `kurzusid`) VALUES
-(1, 5),
-(1, 6);
-
 -- --------------------------------------------------------
 
 --
@@ -101,8 +92,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `permission`) VALUES
-(1, 'Martin', 'Palotai', 'catsharkshin@gmail.com', '2891baceeef1652ee698294da0e71ba78a2a4064', '2'),
-(2, 'Martin', 'Palotai', 'magyarpanda@gmail.com', '2891baceeef1652ee698294da0e71ba78a2a4064', '');
+(3, 'Szunyix', 'Kaszás', 'szunyix@gmail.com', '2891baceeef1652ee698294da0e71ba78a2a4064', '');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -155,7 +145,7 @@ ALTER TABLE `oktatok`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Megkötések a kiírt táblákhoz
